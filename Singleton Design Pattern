@@ -1,0 +1,41 @@
+import java.util.*;
+import java.util.stream.*;
+
+
+public class Main {
+
+	private static Main instance;
+
+	private Main() { // In this Constructor the Access Modifier is Private so, we Cannot create the
+						// Object OutSide the Class.
+
+	}
+
+	public static Main getInstance() {
+
+		if (instance == null) {
+
+			instance = new Main();
+
+		}
+
+		return instance;
+	}
+
+	public static void main(String[] args) {
+
+		/* Singleton Design Pattern */
+
+		/* Just Like Normal POJO Class. Difference is we Create an Object. */
+
+		System.out.println(Main.getInstance());
+		System.out.println(Main.getInstance());
+
+		// output: Should be in Same Memory address
+		// Like this :
+		// Main@1a3869f4
+		// Main@1a3869f4
+
+	}
+
+}
