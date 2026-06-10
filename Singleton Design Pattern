@@ -1,25 +1,32 @@
 import java.util.*;
 import java.util.stream.*;
 
-
 public class Main {
 
 	private static Main instance;
+	// 1.private -> because we Can only Call within the class.
+	// 2. static -> We can Call the getInstance Directly with ClassName :
+	// Main.getInstance() (i.e ; System.out.print(Main.getInstance()))
 
-	private Main() { // In this Constructor the Access Modifier is Private so, we Cannot create the
+	private Main() { // *In this Constructor the Access Modifier is Private so, we Cannot create the
 						// Object OutSide the Class.
+
+		// *Constructor should not be static So, We Cannot be able to Call and create
+		// the
+		// object by className (i.e : Main) directly Outside the Class.
 
 	}
 
 	public static Main getInstance() {
 
-		if (instance == null) {
+		if (instance == null) { // If Condition to Check the Object is already created or not.
 
-			instance = new Main();
+			instance = new Main(); // If not created already this will create an new Object.
 
 		}
 
-		return instance;
+		return instance; // If already created that it will not go inside If Condition as it is not null.
+							// It will directly return the instance.
 	}
 
 	public static void main(String[] args) {
@@ -28,7 +35,9 @@ public class Main {
 
 		/* Just Like Normal POJO Class. Difference is we Create an Object. */
 
-		System.out.println(Main.getInstance());
+		Main obj = new Main();
+
+		System.out.println(obj.getInstance());
 		System.out.println(Main.getInstance());
 
 		// output: Should be in Same Memory address
