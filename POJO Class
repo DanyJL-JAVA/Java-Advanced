@@ -1,0 +1,90 @@
+import java.util.*;
+import java.util.stream.*;
+
+public class TempVo {
+
+	private int registerNo;
+	private String name;
+	private double salary;
+	private String place;
+
+	public TempVo(int registerNo, String name, double salary, String place) {
+
+		this.registerNo = registerNo;
+		this.name = name;
+		this.salary = salary;
+		this.place = place;
+
+	}
+
+	// registerNo
+	public int getRegisterNo() {
+
+		return registerNo;
+
+	}
+
+	public void setRegisterNo(int registerNo) {
+
+		this.registerNo = registerNo;
+
+	}
+
+	//
+
+	// name
+	public String name() {
+
+		return name;
+	}
+
+	public void setName(String name) {
+
+		this.name = name;
+
+	}
+
+	//
+
+	// salary
+
+	public double getSalary() {
+
+		return salary;
+
+	}
+
+	public void setSalary(double salary) {
+
+		this.salary = salary;
+
+	}
+
+	// place
+
+	public String getPlace() {
+
+		return place;
+	}
+
+	public void setPlace(String place) {
+
+		this.place = place;
+
+	}
+
+	// toString
+
+//	private int registerNo;
+//	private String name;
+//	private double salary;
+//	private String place;
+
+	public String toString() {
+
+		return "[TempVo -> registerNo = " + registerNo + "| name = " + name + " |salary =" + salary + "| place = "
+				+ place + "]";
+
+	}
+
+}
